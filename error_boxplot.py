@@ -35,6 +35,5 @@ print("ERROR CALJH - Lower Quartile:", CALJH_stats[0], "Upper Quartile:", CALJH_
 # Plotting the boxplots
 plt.figure(figsize = (10, 8))
 plt.yticks(np.arange(0, 4.1, 0.5))
-boxplots = plt.boxplot([ANN1_num, RF2_num, RF3_num, RF4_num, HS_num, CALJH_num], labels=['ERROR_ANN1', 'ERROR_RF2', 'ERROR_RF3', 'ERROR_RF4', 'ERROR_HS', 'ERROR_CALJH'], flierprops = flierprops, patch_artist=True, showmeans = True, medianprops=medianprops, meanprops=meanprops)
-plt.title('Boxplot of ERROR Data from Excel')
-plt.ylabel('Values')
+boxplots = plt.boxplot([ANN1_num, RF2_num, RF3_num, RF4_num, HS_num, CALJH_num], labels=['ANN1', 'RF2', 'RF3', 'RF4', 'HS', 'Cal_JH'], flierprops = flierprops, patch_artist=True, showmeans = True, medianprops=medianprops, meanprops=meanprops)
+plt.ylabel(r'Prediction Errors, mm $d^{-1}$')
